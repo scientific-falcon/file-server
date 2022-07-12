@@ -19,6 +19,8 @@ python_version = "3.9"
 
 [scripts]
 docs = "pdoc python_template"
-debug = "uvicorn --log-level debug --reload python_template:app"
+debug = "uvicorn --log-level debug --reload app:app"
 style = "flake8 python_template"
 test = "pytest"
+prod = "uvicorn --workers 4 --env-file config/prod.env app:app"
+prod_view = "uvicorn --workers 4 --env-file config/prod_view.env app:app"

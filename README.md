@@ -1,7 +1,7 @@
 <div align="center">
     <img src="docs/assets/Logo.png" height="100px">
-    <h1>Project name</h1>
-    <p>Provide here short description, what the project does</p>
+    <h1>Fastapi file server</h1>
+    <p>File storage with web view</p>
     <a href="https://github.com/segmentation-error-cpp/python-template/actions/workflows/pdoc.yml">
         <img src="https://github.com/segmentation-error-cpp/python-template/actions/workflows/pdoc.yml/badge.svg">
     </a>
@@ -13,10 +13,6 @@
     </a>
 </div>
 
-> Select poetry or pipenv
-
-Long description goes here
-
 ## Table of content
 - [Table of content](#table-of-content)
 - [Requirements](#requirements)
@@ -24,42 +20,35 @@ Long description goes here
   - [Architecture](#architecture)
   - [Packages](#packages)
   - [Lang requirements](#lang-requirements)
-  - [Features](#features)
 - [Deployment](#deployment)
-- [Contributing](#contributing)
-- [Sponsors](#sponsors)
 
 ## Requirements
-> Table, describing what package requires and under what License, it destributes
 
 | name   | version | description                      |
 | ------ | ------- | -------------------------------- |
-| Python | 3.7.0   | Main implementation language     |
+| Python | 3.9.0   | Main implementation language     |
 
 ## Description
-> Place here more description about project
+File-server is a Python package wich implements file-server as part of some server. It designed
+to be as much extendable and usable as it is possible. By default, runs as standalone self-hosted
+server, without web client, but running `prod_view` will create a SSR model of working with all
+files, hosted by the server. Authentification is included, based on sessions.
 
 ### Architecture
-> Optional. Place here everything about [pattern](https://en.wikipedia.org/wiki/Software_design_pattern), that were used
+Package uses state machine pattern inside, which makes it easiear to handle some specific features
+like file compressing, reloading and so on.
 
 ### Packages
-> Optional. Place here inner packages, which comes as output
+See release in github
 
 ### Lang requirements
-> Optional. Packages, required for running programm.
 
 | Name              | Version | Description                     | Requirements |
 | ----------------- | ------- | ------------------------------- | ------------ |
-| Poetry/Pipenv     | Any     | Package manager                 | 🟩           |
-
-### Features
-> Required. Place here features in table style or sub headers
+| Pipenv            | Any     | Package manager                 | 🟩           |
 
 ## Deployment
-> Required. Place here where used
-
-## Contributing
-> Required. Who worked on this packagess
-
-## Sponsors
-> Optional. Place here who sponsoring this package
+1. As self hosted
+   1. Enter the folder from terminal
+   2. Run `pipenv install`
+   3. For web view `pipenv run prod_view`, without `pipenv run prod`

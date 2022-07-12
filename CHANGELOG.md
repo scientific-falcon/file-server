@@ -1,4 +1,5 @@
 
 # Changelog
 
-Keep it with hounor <https://keepachangelog.com/en/1.0.0/>
+## 12.07 - Initial commit
+No special updates, just started work
